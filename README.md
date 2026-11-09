@@ -34,7 +34,8 @@ python -m pytest tests -q         # 12 tests: integrity, leakage, metrics, dashb
 
 ## Structure
 ```
-app.py, dashboard/      Streamlit app (Overview, Team Elo & Form, Prediction, Insights)
+app.py, dashboard/      Streamlit app (Overview, Team Elo & Form, Prediction, Insights); theme.py = dark/copper style
+assets/logos/           club crests (python -m scripts.fetch_logos; initials badge if missing)
 src/                    data_collection, data_processing, features, evaluation, model_training
 notebooks/              01 data, 02 EDA, 03 modelling (executed)
 reports/                project_description.md, metrics CSVs, figures/
@@ -48,5 +49,8 @@ Features of a match use only earlier matches (state is updated after writing eac
 ## Limitations
 Scores only (no shots, xG, lineups, odds); 2 test seasons; 2025-26 incomplete; no draw predictions; educational, not betting advice.
 
+## Dashboard
+Dark theme with copper accents. Every chart is interactive (hover for values; season, club and filter controls update the page). Club crests appear in tables, charts and the match card. Open a page directly with `?page=Prediction` etc.
+
 ## Data and license
-Data: openfootball/football.json, CC0. See `data/README.md`. Add a `LICENSE` file for the code before publishing (e.g. MIT).
+Data: openfootball/football.json, CC0. See `data/README.md`. Club crests are trademarks of their clubs and are used only to identify teams. Add a `LICENSE` file for the code before publishing (e.g. MIT).
