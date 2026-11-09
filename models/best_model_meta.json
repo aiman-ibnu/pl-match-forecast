@@ -1,0 +1,49 @@
+{
+  "model": "Logistic Regression",
+  "params": {
+    "C": 0.01
+  },
+  "features": [
+    "elo_diff",
+    "elo_home",
+    "elo_away",
+    "ppg5_home",
+    "ppg5_away",
+    "gf5_home",
+    "gf5_away",
+    "ga5_home",
+    "ga5_away",
+    "rest_home",
+    "rest_away"
+  ],
+  "classes": [
+    "A",
+    "D",
+    "H"
+  ],
+  "train_seasons": [
+    "2015-16",
+    "2016-17",
+    "2017-18",
+    "2018-19",
+    "2019-20",
+    "2020-21",
+    "2021-22",
+    "2022-23"
+  ],
+  "test_seasons": [
+    "2023-24",
+    "2024-25"
+  ],
+  "partial_season": [
+    "2025-26"
+  ],
+  "n_train": 3001,
+  "n_test": 754,
+  "n_partial": 353,
+  "class_share_train": {
+    "A": 0.3195601466177941,
+    "D": 0.2315894701766078,
+    "H": 0.4488503832055981
+  }
+}
